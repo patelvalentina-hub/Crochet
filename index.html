@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heirloom Knot - Handmade Crochet Designs</title>
+    <!-- Load Tailwind CSS (Warning: CDN is for development/demo only) --><script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles based on the new, more eye-catching Lavender/Plum palette */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f0; /* Light beige/cream background for coziness */
+            scroll-behavior: smooth;
+            color: #1f2937; /* Default dark gray text for readability */
+        }
+        /* Primary Deep Plum/Berry */
+        .text-heirloom-plum {
+            color: #6b21a8; /* Darker, richer purple */
+        }
+        .bg-heirloom-plum {
+            background-color: #6b21a8;
+        }
+        /* Secondary Lavender Blush Accent */
+        .text-heirloom-lavender-blush {
+            color: #d8b4fe; /* Brighter, softer lavender */
+        }
+        .bg-heirloom-lavender-blush {
+            background-color: #d8b4fe;
+        }
+        .border-heirloom-plum {
+            border-color: #6b21a8;
+        }
+        .hover\:bg-plum-dark:hover {
+            background-color: #581c87; /* Even darker plum for hover */
+        }
+        .focus\:ring-heirloom-plum:focus {
+            --tw-ring-color: #6b21a8;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-extrabold text-heirloom-plum tracking-widest">
+                    The Heirloom Knot
+                </a>
+                <div class="flex space-x-4">
+                    <a href="#products" class="text-gray-600 hover:text-heirloom-plum transition-colors font-medium">Products</a>
+                    <a href="#about" class="text-gray-600 hover:text-heirloom-plum transition-colors font-medium">About</a>
+                    <!-- Contact now links to the integrated CTA at the bottom of the products section -->
+                    <a href="#order-cta" class="text-gray-600 hover:text-heirloom-plum transition-colors font-medium">Order</a> 
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="bg-heirloom-plum text-white py-20 sm:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl sm:text-7xl font-extrabold mb-4">
+                Crafted Comfort, Made to Last.
+            </h2>
+            <p class="text-xl sm:text-2xl font-light mb-8">
+                Timeless crochet designs and blankets, handcrafted with love.
+            </p>
+            <a href="#products" class="inline-block bg-heirloom-lavender-blush text-heirloom-plum px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-white transition-colors uppercase tracking-wider">
+                Explore Our Collection
+            </a>
+        </div>
+    </header>
+
+    <!-- Products Section (Rose Granny Square Blankets and Integrated CTA) -->
+    <section id="products" class="py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-heirloom-plum">
+                Our Signature: Rose Granny Square Blankets
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- COLUMN 1: Product Image / Placeholder -->
+                <div class="flex flex-col items-center">
+                    <img src="WhatsApp Image 2025-11-17 at 13.06.52_f197af80.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/500x500/6b21a8/ffffff?text=Crochet+Design+Photo'" 
+                         alt="Close-up of a handmade crochet Rose Granny Square" 
+                         class="w-80 h-80 object-cover rounded-xl border-4 border-heirloom-lavender-blush shadow-2xl mb-8">
+                    <p class="text-sm text-gray-500 mt-4">Note: Exact dimensions may vary slightly depending on yarn type.</p>
+                </div>
+
+                <!-- COLUMN 2: Size Options Table and Integrated CTA -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">1. Choose Your Heirloom Size:</h3>
+                    
+                    <div class="overflow-x-auto bg-white rounded-lg shadow-xl">
+                        <table class="min-w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100 text-gray-700 border-b border-gray-300">
+                                    <th class="py-3 px-4 text-sm font-semibold uppercase">Select</th>
+                                    <th class="py-3 px-4 text-sm font-semibold uppercase">Size</th>
+                                    <th class="py-3 px-4 text-sm font-semibold uppercase">Squares (W x H)</th>
+                                    <th class="py-3 px-4 text-sm font-semibold uppercase text-right hidden sm:table-cell">Approx. Size*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                    <td class="py-4 px-4">
+                                        <input type="radio" name="product-size" value="Rose Granny Square Blanket - Baby / Crib (30 squares, 50cm x 60cm)" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                    </td>
+                                    <td class="py-4 px-4 font-bold text-gray-800">Baby / Crib</td>
+                                    <td class="py-4 px-4 text-gray-600">30 (5x6)</td>
+                                    <td class="py-4 px-4 text-gray-600 text-right hidden sm:table-cell">50cm x 60cm</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                    <td class="py-4 px-4">
+                                        <input type="radio" name="product-size" value="Rose Granny Square Blanket - Throw / Lapghan (56 squares, 70cm x 80cm)" checked class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                    </td>
+                                    <td class="py-4 px-4 font-bold text-heirloom-plum">Throw / Lapghan</td>
+                                    <td class="py-4 px-4 text-heirloom-plum font-extrabold">56 (7x8)</td>
+                                    <td class="py-4 px-4 text-heirloom-plum font-semibold text-right hidden sm:table-cell">70cm x 80cm</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                    <td class="py-4 px-4">
+                                        <input type="radio" name="product-size" value="Rose Granny Square Blanket - Twin / Single (96 squares, 80cm x 120cm)" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                    </td>
+                                    <td class="py-4 px-4 font-bold text-gray-800">Twin / Single</td>
+                                    <td class="py-4 px-4 text-gray-600">96 (8x12)</td>
+                                    <td class="py-4 px-4 text-gray-600 text-right hidden sm:table-cell">80cm x 120cm</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                    <td class="py-4 px-4">
+                                        <input type="radio" name="product-size" value="Rose Granny Square Blanket - Queen Size (132 squares, 110cm x 120cm)" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                    </td>
+                                    <td class="py-4 px-4 font-bold text-gray-800">Queen Size</td>
+                                    <td class="py-4 px-4 text-gray-600">132 (11x12)</td>
+                                    <td class="py-4 px-4 text-gray-600 text-right hidden sm:table-cell">110cm x 120cm</td>
+                                </tr>
+                                <!-- CUSTOMIZE OPTION -->
+                                <tr class="bg-heirloom-lavender-blush/50 hover:bg-heirloom-lavender-blush/70 transition-colors border-t-2 border-heirloom-plum">
+                                    <td class="py-4 px-4">
+                                        <input type="radio" name="product-size" value="Custom Order" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                    </td>
+                                    <td class="py-4 px-4 font-bold text-heirloom-plum">Customize</td>
+                                    <td class="py-4 px-4 text-heirloom-plum font-bold" colspan="2">
+                                        Specify size, color, or other design elements.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Integrated Call to Action (CTA) for Ordering -->
+                    <div id="order-cta" class="bg-white mt-8 p-6 rounded-xl shadow-2xl border-t-8 border-heirloom-plum text-center">
+                        <h3 class="text-2xl font-semibold mb-4 text-heirloom-plum">2. Place Your Order</h3>
+                        <p class="text-lg mb-6 text-gray-600">
+                            Confirm your selection above and click below to chat with us directly on WhatsApp.
+                        </p>
+
+                        <a id="whatsapp-link" 
+                           href="#" 
+                           target="_blank" 
+                           class="inline-block w-full bg-green-500 text-white py-3 px-8 rounded-lg font-bold text-lg hover:bg-green-600 transition-colors shadow-md transform hover:scale-105 duration-300">
+                            Chat on WhatsApp
+                        </a>
+
+                        <p class="text-sm text-gray-500 mt-4">
+                            Expect a reply within 24 hours for all inquiries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Our Story) -->
+    <section id="about" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6 text-heirloom-plum">Our Story</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                "The Heirloom Knot" was founded on the belief that true comfort comes from quality, time-honored craft. Every single square, every stitch, and every seam is handled with meticulous care, ensuring your blanket is not just a covering, but a piece of family history designed to be passed down through generations. We pride ourselves on using premium, durable yarn and ethical practices.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 The Heirloom Knot. Handmade with love.</p>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Reads the selected product size and updates the WhatsApp link's href
+         * to include the product details in the pre-filled message text.
+         */
+        function updateWhatsAppLink() {
+            const selectedRadio = document.querySelector('input[name="product-size"]:checked');
+            const whatsappLinkElement = document.getElementById('whatsapp-link');
+
+            // Fallback message for unexpected selections
+            let messageText = "Hello, I am interested in a custom order from The Heirloom Knot.";
+
+            if (selectedRadio && selectedRadio.value) {
+                const productDetails = selectedRadio.value;
+                
+                // If 'Custom Order' is selected, use a clean, focused message
+                if (productDetails === "Custom Order") {
+                    messageText = "Hello, I am interested in a Custom Order. Please advise on colors, sizing, or product options.";
+                } else {
+                    // Standard product inquiry message (includes product name and size)
+                    messageText = `Hello, I would like to inquire about the following product: ${productDetails}.`;
+                }
+            }
+
+            // Base URL and phone number
+            const phoneNumber = '+919167008015';
+            
+            // Encode the message text for use in a URL
+            const encodedMessage = encodeURIComponent(messageText);
+            
+            // Construct the final WhatsApp link
+            const newHref = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            if (whatsappLinkElement) {
+                whatsappLinkElement.href = newHref;
+            }
+        }
+
+        // Initialize the link on page load (using the default 'Throw / Lapghan' selection)
+        document.addEventListener('DOMContentLoaded', updateWhatsAppLink);
+    </script>
+</body>
+</html>
