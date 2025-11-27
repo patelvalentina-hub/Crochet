@@ -41,19 +41,18 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar (Removed 'Order' link as requested) -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- FIX APPLIED: Changed to text-xl for mobile and sm:text-2xl for larger screens to prevent clipping -->
+                <!-- Title is responsive: text-xl for mobile, sm:text-2xl for larger screens -->
                 <a href="#" class="text-xl sm:text-2xl font-extrabold text-heirloom-plum tracking-widest">
                     The Heirloom Knot
                 </a>
-                <div class="flex space-x-4">
+                <!-- Only Products and About links remain -->
+                <div class="flex items-center space-x-4">
                     <a href="#products" class="text-gray-600 hover:text-heirloom-plum transition-colors font-medium">Products</a>
                     <a href="#about" class="text-gray-600 hover:text-heirloom-plum transition-colors font-medium">About</a>
-                    <!-- Contact now links to the integrated CTA at the bottom of the products section -->
-                    <a href="#order-cta" class="text-gray-600 hover:text-heirloom-plum transition-colors font-medium">Order</a> 
                 </div>
             </div>
         </div>
@@ -74,105 +73,121 @@
         </div>
     </header>
 
-    <!-- Products Section (Rose Granny Square Blankets and Integrated CTA) -->
+    <!-- Products Section (Only Rose Granny Square Blankets remains) -->
     <section id="products" class="py-16 sm:py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-heirloom-plum">
-                Our Signature: Rose Granny Square Blankets
-            </h2>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+            
+            <!-- PRODUCT 1: Rose Granny Square Blankets -->
+            <div id="product-rose-square">
+                <h2 class="text-4xl font-bold text-center mb-12 text-heirloom-plum">
+                    Rose Granny Square Blankets
+                </h2>
 
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <!-- COLUMN 1: Product Image / Placeholder -->
-                <div class="flex flex-col items-center">
-                    <!-- FIX APPLIED: Updated image source to the cloud storage URL for reliable loading -->
-                    <img src="WhatsApp Image 2025-11-17 at 13.06.52_f197af80.jpg" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/500x500/6b21a8/ffffff?text=Crochet+Design+Photo'" 
-                         alt="Close-up of a handmade crochet Rose Granny Square" 
-                         class="w-80 h-80 object-cover rounded-xl border-4 border-heirloom-lavender-blush shadow-2xl mb-8">
-                    <p class="text-sm text-gray-500 mt-4">Note: Exact dimensions may vary slightly depending on yarn type.</p>
-                </div>
-
-                <!-- COLUMN 2: Size Options Table and Integrated CTA -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6">1. Choose Your Heirloom Size:</h3>
-                    
-                    <div class="overflow-x-auto bg-white rounded-lg shadow-xl">
-                        <table class="min-w-full text-left border-collapse">
-                            <thead>
-                                <tr class="bg-gray-100 text-gray-700 border-b border-gray-300">
-                                    <th class="py-3 px-4 text-sm font-semibold uppercase">Select</th>
-                                    <th class="py-3 px-4 text-sm font-semibold uppercase">Size</th>
-                                    <th class="py-3 px-4 text-sm font-semibold uppercase">Squares (W x H)</th>
-                                    <th class="py-3 px-4 text-sm font-semibold uppercase text-right hidden sm:table-cell">Approx. Size*</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">
-                                        <input type="radio" name="product-size" value="Rose Granny Square Blanket - Baby / Crib (30 squares, 50cm x 60cm)" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
-                                    </td>
-                                    <td class="py-4 px-4 font-bold text-gray-800">Baby / Crib</td>
-                                    <td class="py-4 px-4 text-gray-600">30 (5x6)</td>
-                                    <td class="py-4 px-4 text-gray-600 text-right hidden sm:table-cell">50cm x 60cm</td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">
-                                        <input type="radio" name="product-size" value="Rose Granny Square Blanket - Throw / Lapghan (56 squares, 70cm x 80cm)" checked class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
-                                    </td>
-                                    <td class="py-4 px-4 font-bold text-heirloom-plum">Throw / Lapghan</td>
-                                    <td class="py-4 px-4 text-heirloom-plum font-extrabold">56 (7x8)</td>
-                                    <td class="py-4 px-4 text-heirloom-plum font-semibold text-right hidden sm:table-cell">70cm x 80cm</td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">
-                                        <input type="radio" name="product-size" value="Rose Granny Square Blanket - Twin / Single (96 squares, 80cm x 120cm)" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
-                                    </td>
-                                    <td class="py-4 px-4 font-bold text-gray-800">Twin / Single</td>
-                                    <td class="py-4 px-4 text-gray-600">96 (8x12)</td>
-                                    <td class="py-4 px-4 text-gray-600 text-right hidden sm:table-cell">80cm x 120cm</td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">
-                                        <input type="radio" name="product-size" value="Rose Granny Square Blanket - Queen Size (132 squares, 110cm x 120cm)" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
-                                    </td>
-                                    <td class="py-4 px-4 font-bold text-gray-800">Queen Size</td>
-                                    <td class="py-4 px-4 text-gray-600">132 (11x12)</td>
-                                    <td class="py-4 px-4 text-gray-600 text-right hidden sm:table-cell">110cm x 120cm</td>
-                                </tr>
-                                <!-- CUSTOMIZE OPTION -->
-                                <tr class="bg-heirloom-lavender-blush/50 hover:bg-heirloom-lavender-blush/70 transition-colors border-t-2 border-heirloom-plum">
-                                    <td class="py-4 px-4">
-                                        <input type="radio" name="product-size" value="Custom Order" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
-                                    </td>
-                                    <td class="py-4 px-4 font-bold text-heirloom-plum">Customize</td>
-                                    <td class="py-4 px-4 text-heirloom-plum font-bold" colspan="2">
-                                        Specify size, color, or other design elements.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <!-- COLUMN 1: Product Image / Placeholder -->
+                    <div class="flex flex-col items-center">
+                        <img src="WhatsApp Image 2025-11-17 at 13.06.52_f197af80.jpg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/500x500/6b21a8/ffffff?text=Rose+Square+Blanket'" 
+                             alt="Close-up of a handmade crochet Rose Granny Square" 
+                             class="w-80 h-80 object-cover rounded-xl border-4 border-heirloom-lavender-blush shadow-2xl mb-8">
+                        <p class="text-sm text-gray-500 mt-4">Note: Exact dimensions may vary slightly depending on yarn type.</p>
                     </div>
-                    
-                    <!-- Integrated Call to Action (CTA) for Ordering -->
-                    <div id="order-cta" class="bg-white mt-8 p-6 rounded-xl shadow-2xl border-t-8 border-heirloom-plum text-center">
-                        <h3 class="text-2xl font-semibold mb-4 text-heirloom-plum">2. Place Your Order</h3>
-                        <p class="text-lg mb-6 text-gray-600">
-                            Confirm your selection above and click below to chat with us directly on WhatsApp.
-                        </p>
 
-                        <a id="whatsapp-link" 
-                           href="#" 
-                           target="_blank" 
-                           class="inline-block w-full bg-green-500 text-white py-3 px-8 rounded-lg font-bold text-lg hover:bg-green-600 transition-colors shadow-md transform hover:scale-105 duration-300">
-                            Chat on WhatsApp
-                        </a>
+                    <!-- COLUMN 2: Size Options Table and CTA (MERGED) -->
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6 text-heirloom-plum">Choose Size & Order Inquiry</h3>
+                        <p class="text-gray-600 mb-6">Select your desired size from the options below. Your selection automatically updates the WhatsApp order inquiry link.</p>
 
-                        <p class="text-sm text-gray-500 mt-4">
-                            Expect a reply within 24 hours for all inquiries.
-                        </p>
+                        <!-- Size Selection Table -->
+                        <div class="overflow-x-auto bg-white rounded-lg shadow-xl mb-10">
+                            <table class="min-w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-gray-100 text-gray-700 border-b border-gray-300">
+                                        <th class="py-3 px-4 text-sm font-semibold uppercase">Select</th>
+                                        <th class="py-3 px-4 text-sm font-semibold uppercase">Size</th>
+                                        <th class="py-3 px-4 text-sm font-semibold uppercase hidden sm:table-cell">Squares (W x H)</th>
+                                        <th class="py-3 px-4 text-sm font-semibold uppercase">Approx. Size*</th>
+                                        <th class="py-3 px-4 text-sm font-semibold uppercase text-right">Price (INR)</th> <!-- New Price Column -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                        <td class="py-4 px-4">
+                                            <input type="radio" name="product-option" value="Baby / Crib (30 squares, 50cm x 60cm)" data-product="Rose Granny Square Blanket" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                        </td>
+                                        <td class="py-4 px-4 font-bold text-gray-800">Baby / Crib</td>
+                                        <td class="py-4 px-4 text-gray-600 hidden sm:table-cell">30 (5x6)</td> <!-- Hidden on mobile -->
+                                        <td class="py-4 px-4 text-gray-600">50cm x 60cm</td>
+                                        <td class="py-4 px-4 font-bold text-gray-800 text-right">₹10,117</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors bg-heirloom-lavender-blush/20">
+                                        <td class="py-4 px-4">
+                                            <input type="radio" name="product-option" value="Throw / Lapghan (56 squares, 70cm x 80cm)" data-product="Rose Granny Square Blanket" checked class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                        </td>
+                                        <td class="py-4 px-4 font-bold text-heirloom-plum">Throw / Lapghan</td>
+                                        <td class="py-4 px-4 text-heirloom-plum font-extrabold hidden sm:table-cell">56 (7x8)</td> <!-- Hidden on mobile -->
+                                        <td class="py-4 px-4 text-heirloom-plum font-semibold">70cm x 80cm</td>
+                                        <td class="py-4 px-4 font-bold text-heirloom-plum text-right">₹18,885</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                        <td class="py-4 px-4">
+                                            <input type="radio" name="product-option" value="Twin / Single (96 squares, 80cm x 120cm)" data-product="Rose Granny Square Blanket" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                        </td>
+                                        <td class="py-4 px-4 font-bold text-gray-800">Twin / Single</td>
+                                        <td class="py-4 px-4 text-gray-600 hidden sm:table-cell">96 (8x12)</td> <!-- Hidden on mobile -->
+                                        <td class="py-4 px-4 text-gray-600">80cm x 120cm</td>
+                                        <td class="py-4 px-4 font-bold text-gray-800 text-right">₹32,375</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                        <td class="py-4 px-4">
+                                            <input type="radio" name="product-option" value="Queen Size (132 squares, 110cm x 120cm)" data-product="Rose Granny Square Blanket" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                        </td>
+                                        <td class="py-4 px-4 font-bold text-gray-800">Queen Size</td>
+                                        <td class="py-4 px-4 text-gray-600 hidden sm:table-cell">132 (11x12)</td> <!-- Hidden on mobile -->
+                                        <td class="py-4 px-4 text-gray-600">110cm x 120cm</td>
+                                        <td class="py-4 px-4 font-bold text-gray-800 text-right">₹44,516</td> <!-- UPDATED PRICE HERE -->
+                                    </tr>
+                                    <!-- CUSTOMIZE OPTION - Colspan adjusted from 2 to 3 to cover Squares, Size*, and Price -->
+                                    <tr class="bg-heirloom-lavender-blush/50 hover:bg-heirloom-lavender-blush/70 transition-colors border-t-2 border-heirloom-plum">
+                                        <td class="py-4 px-4">
+                                            <input type="radio" name="product-option" value="Custom Order" data-product="Rose Granny Square Blanket" class="text-heirloom-plum focus:ring-heirloom-plum h-4 w-4" onchange="updateWhatsAppLink()">
+                                        </td>
+                                        <td class="py-4 px-4 font-bold text-heirloom-plum">Custom Size/Color</td>
+                                        <td class="py-4 px-4 text-heirloom-plum font-bold" colspan="3">
+                                            Specify size, color, or other design elements. (Price on Quote)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- MERGED Call to Action (CTA) for Ordering -->
+                        <div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-heirloom-plum text-center">
+                            <h4 class="text-2xl font-semibold mb-4 text-heirloom-plum">Ready to Order?</h4>
+                            
+                            <p class="text-lg mb-6 text-gray-600 product-summary-text">
+                                Throw / Lapghan for the Rose Granny Square Blanket selected. Click below to chat with us directly on WhatsApp.
+                            </p>
+
+                            <a href="#" 
+                               target="_blank" 
+                               class="inline-block w-full bg-green-500 text-white py-3 px-8 rounded-lg font-bold text-lg hover:bg-green-600 transition-colors shadow-md transform hover:scale-105 duration-300 flex items-center justify-center space-x-2 whatsapp-link-btn">
+                                <!-- WhatsApp Icon (inline SVG for stability) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-white">
+                                    <path d="M12.001 2c-5.522 0-10 4.477-10 10s4.478 10 10 10c1.47 0 2.863-.322 4.12-1.018l2.915 1.018-1.066-2.85c.783-1.29 1.232-2.776 1.232-4.148 0-5.523-4.478-10-10-10zm4.232 12.56c-.053.088-.282.266-.4.321-.122.056-.254.085-.385.085-.13 0-.214-.044-.457-.132s-1.425-.693-1.644-.778c-.219-.088-.189-.132-.133-.22s.131-.122.219-.244c.088-.122.147-.22.219-.321.071-.1.036-.188-.018-.32s-.385-.92-.527-1.261c-.147-.336-.294-.282-.403-.287-.105-.005-.226-.005-.348-.005s-.31.044-.47.219c-.159.176-.61 1.621-.61 3.511 0 1.89 1.144 3.279 1.303 3.486.159.206 2.22 3.393 5.407 4.542 3.187 1.148 3.297.771 3.87.728.573-.044 1.865-.758 2.122-1.503.257-.745.257-.866.17-1.008-.088-.142-.321-.22-.452-.287-.13-.065-.309-.105-.487-.06-.178.044-.309.132-.4-.22z"/>
+                                </svg>
+                                <span>Inquire & Discuss Order</span>
+                            </a>
+
+                            <p class="text-sm text-gray-500 mt-4">
+                                Expect a reply within 24 hours for all inquiries.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div> <!-- End Product 1 -->
+
+            
         </div>
     </section>
 
@@ -193,32 +208,50 @@
         </div>
     </footer>
 
+    <!-- JavaScript remains compatible -->
     <script>
         /**
-         * Reads the selected product size and updates the WhatsApp link's href
-         * to include the product details in the pre-filled message text.
+         * Reads the selected product option (size/custom) and updates the WhatsApp link's href
+         * and the summary text in *all* CTA blocks across the page (now only one set).
          */
         function updateWhatsAppLink() {
-            const selectedRadio = document.querySelector('input[name="product-size"]:checked');
-            const whatsappLinkElement = document.getElementById('whatsapp-link');
+            // Find the currently checked radio button from the group 'product-option'
+            const selectedRadio = document.querySelector('input[name="product-option"]:checked');
+            
+            // Elements we need to update (using class selectors since there are now multiples)
+            const whatsappLinkElements = document.querySelectorAll('.whatsapp-link-btn');
+            const summaryElements = document.querySelectorAll('.product-summary-text');
 
-            // Fallback message for unexpected selections
-            let messageText = "Hello, I am interested in a custom order from The Heirloom Knot.";
+            // Default fallback if nothing is selected
+            let productName = "Custom Product";
+            let productOption = "General Inquiry";
+            
+            if (selectedRadio) {
+                // Get the product name from the data-product attribute
+                productName = selectedRadio.getAttribute('data-product') || "Product Inquiry";
+                // Get the specific option (size/custom detail) from the value
+                productOption = selectedRadio.value;
+            }
 
-            if (selectedRadio && selectedRadio.value) {
-                const productDetails = selectedRadio.value;
-                
-                // If 'Custom Order' is selected, use a clean, focused message
-                if (productDetails === "Custom Order") {
-                    messageText = "Hello, I am interested in a Custom Order. Please advise on colors, sizing, or product options.";
-                } else {
-                    // Standard product inquiry message (includes product name and size)
-                    messageText = `Hello, I would like to inquire about the following product: ${productDetails}.`;
-                }
+            // Construct the message based on the selection
+            let messageText;
+            let summaryText;
+
+            if (productOption.includes("Custom Order") || productOption.includes("Custom Color/Yarn")) {
+                messageText = `Hello, I am interested in a Custom Order for the ${productName}. Please advise on colors, sizing, or other options.`;
+                summaryText = `**Custom Order** for the ${productName} selected.`;
+            } else if (productOption === "General Inquiry") {
+                 messageText = "Hello, I have a general inquiry for The Heirloom Knot.";
+                 summaryText = `**No specific size** selected.`;
+            } 
+            else {
+                // Standard product and option message
+                messageText = `Hello, I would like to inquire about ordering the ${productName} in the option: ${productOption}.`;
+                summaryText = `**${productOption}** for the ${productName} selected.`;
             }
 
             // Base URL and phone number
-            const phoneNumber = '+919167008015';
+            const phoneNumber = '+919167008015'; // Assuming this is the correct number
             
             // Encode the message text for use in a URL
             const encodedMessage = encodeURIComponent(messageText);
@@ -226,9 +259,14 @@
             // Construct the final WhatsApp link
             const newHref = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
             
-            if (whatsappLinkElement) {
-                whatsappLinkElement.href = newHref;
-            }
+            // Update ALL instances of the CTA elements with the selected information
+            summaryElements.forEach(element => {
+                element.innerHTML = `${summaryText} Click below to chat with us directly on WhatsApp.`;
+            });
+
+            whatsappLinkElements.forEach(element => {
+                element.href = newHref;
+            });
         }
 
         // Initialize the link on page load (using the default 'Throw / Lapghan' selection)
